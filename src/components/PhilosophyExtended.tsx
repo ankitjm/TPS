@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Spline from '@splinetool/react-spline';
 import { motion } from 'framer-motion';
 
@@ -9,17 +9,6 @@ interface PhilosophyExtendedProps {
 
 const PhilosophyExtended: React.FC<PhilosophyExtendedProps> = () => {
   const [splineLoaded, setSplineLoaded] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    // Check if device is mobile to prevent WebGL memory crashes in iOS
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768 || /iPhone|iPad|iPod|Android/i.test(navigator.userAgent));
-    };
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
 
   const handleSplineLoad = () => {
     console.log('Spline scene loaded successfully');
@@ -34,28 +23,26 @@ const PhilosophyExtended: React.FC<PhilosophyExtendedProps> = () => {
       transition={{ duration: 0.8, ease: "easeInOut" }}
       className="relative w-full h-screen flex items-center justify-center px-8 bg-black"
     >
-      {/* Spline 3D Background - Disabled on mobile to prevent Safari crashes */}
-      {!isMobile && (
-        <div className="absolute inset-0 w-full h-full">
-          <Spline
-            scene="https://prod.spline.design/aTzlvFg1qkMe6DZR/scene.splinecode"
-            onLoad={handleSplineLoad}
-            className="w-full h-full"
-          />
-        </div>
-      )}
+      {/* Spline 3D Background */}
+      <div className="absolute inset-0 w-full h-full">
+        <Spline
+          scene="https://prod.spline.design/aTzlvFg1qkMe6DZR/scene.splinecode"
+          onLoad={handleSplineLoad}
+          className="w-full h-full"
+        />
+      </div>
 
-      {/* Loading overlay that fades out when Spline loads (or skip on mobile) */}
+      {/* Loading overlay that fades out when Spline loads */}
       <motion.div
         initial={{ opacity: 1 }}
-        animate={{ opacity: (splineLoaded || isMobile) ? 0 : 1 }}
+        animate={{ opacity: splineLoaded ? 0 : 1 }}
         transition={{ duration: 0.5 }}
         className="absolute inset-0 bg-black z-10 pointer-events-none"
       />
 
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: (splineLoaded || isMobile) ? 1 : 0, scale: (splineLoaded || isMobile) ? 1 : 0.8 }}
+        animate={{ opacity: splineLoaded ? 1 : 0, scale: splineLoaded ? 1 : 0.8 }}
         transition={{ delay: 0.2, duration: 2 }}
         className="text-center z-20 max-w-6xl pointer-events-none"
       >
@@ -99,7 +86,7 @@ const PhilosophyExtended: React.FC<PhilosophyExtendedProps> = () => {
 
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: (splineLoaded || isMobile) ? [0, 0.3, 0] : 0 }}
+        animate={{ opacity: splineLoaded ? [0, 0.3, 0] : 0 }}
         transition={{ delay: 2, duration: 2 }}
         className="absolute inset-0 bg-gradient-conic from-purple-500/20 via-pink-500/20 to-purple-500/20 z-10 pointer-events-none"
       />

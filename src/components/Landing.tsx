@@ -63,10 +63,10 @@ const Landing: React.FC<LandingProps> = ({ onEnter, onSeeWork, onContact }) => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 1.5 }}
-      className="relative w-full min-h-[100dvh] flex flex-col overflow-x-hidden"
+      className="relative w-full min-h-screen flex flex-col"
     >
       {/* Spline 3D Background */}
-      <div className="absolute inset-0 z-0 flex items-center justify-center overflow-hidden">
+      <div className="absolute inset-0 z-0">
         <SplineBackground />
       </div>
 
@@ -74,7 +74,7 @@ const Landing: React.FC<LandingProps> = ({ onEnter, onSeeWork, onContact }) => {
       <motion.img
         src="https://thephygitalstudio.com/assets/images/logo/phygital-studio-logo.png"
         alt="The Phygital Studio"
-        className="absolute top-6 left-6 z-40 h-16 md:h-20 lg:h-24 w-auto"
+        className="fixed top-6 left-6 z-40 h-16 md:h-20 lg:h-24 w-auto"
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 0.5, duration: 1 }}
@@ -82,16 +82,16 @@ const Landing: React.FC<LandingProps> = ({ onEnter, onSeeWork, onContact }) => {
       />
 
       {/* Content Overlay */}
-      <div className="flex-1 flex items-center justify-center z-30 mt-24 md:mt-0 py-8">
+      <div className="flex-1 flex items-center justify-center z-30">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 2, duration: 1 }}
-          className="text-center max-w-6xl mx-auto px-6 sm:px-8 mt-12 md:mt-0"
+          className="text-center max-w-6xl mx-auto px-8"
         >
 
           <motion.h1
-            className="text-[2.5rem] sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-thin tracking-wider mb-6 sm:mb-12 leading-[1.1] md:leading-[0.9] text-white px-2"
+            className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-thin tracking-wider mb-8 sm:mb-12 leading-[0.9] text-white px-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 1 }}

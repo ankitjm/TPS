@@ -307,41 +307,28 @@ function App() {
         </AnimatePresence>
 
         {/* Navigation Indicators */}
-        {currentSection !== 'landing' && currentSection !== 'our-work' && currentSection !== 'contact' && currentSection !== 'privacy' && currentSection !== 'admin' && (() => {
-          const isMobileLandscape = isMobileDevice && !isPortrait;
-          const navBtnClass = `p-3 rounded-full bg-black/60 backdrop-blur-md border border-white/20 shadow-xl ${getNavigationTextColor()}`;
-          const prevBtn = (
+        {currentSection !== 'landing' && currentSection !== 'our-work' && currentSection !== 'contact' && currentSection !== 'privacy' && currentSection !== 'admin' && (
+          <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50 flex items-center space-x-6">
             <motion.button
-              key="nav-prev"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={navigateToPrevious}
-              className={isMobileLandscape ? `fixed left-4 top-1/2 -translate-y-1/2 z-50 ${navBtnClass}` : navBtnClass}
+              className={`p-3 rounded-full bg-black/60 backdrop-blur-md border border-white/20 shadow-xl ${getNavigationTextColor()}`}
               aria-label="Previous"
             >
               <ArrowLeft className="w-6 h-6" />
             </motion.button>
-          );
-          const nextBtn = (
             <motion.button
-              key="nav-next"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={navigateToNext}
-              className={isMobileLandscape ? `fixed right-4 top-1/2 -translate-y-1/2 z-50 ${navBtnClass}` : navBtnClass}
+              className={`p-3 rounded-full bg-black/60 backdrop-blur-md border border-white/20 shadow-xl ${getNavigationTextColor()}`}
               aria-label="Next"
             >
               <ArrowRight className="w-6 h-6" />
             </motion.button>
-          );
-          return isMobileLandscape ? (
-            <>{prevBtn}{nextBtn}</>
-          ) : (
-            <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50 flex items-center space-x-6">
-              {prevBtn}{nextBtn}
-            </div>
-          );
-        })()}
+          </div>
+        )}
 
         {/* Close Experience Button */}
         {(currentSection === 'transition' || currentSection === 'sensory' || currentSection === 'touch-sound' || currentSection === 'interiority' || currentSection === 'philosophy' || currentSection === 'philosophy-extended') && (
