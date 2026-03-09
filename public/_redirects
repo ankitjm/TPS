@@ -1,0 +1,18 @@
+# Main pages
+/    /index.html   200
+/home    /index.html   200
+/our-work    /index.html   200
+/contact    /index.html   200
+/privacy    /index.html   200
+/admin    /index.html   200
+
+# Experience slides
+/experience/transition    /index.html   200
+/experience/sensory    /index.html   200
+/experience/touch-sound    /index.html   200
+/experience/interiority    /index.html   200
+/experience/philosophy    /index.html   200
+/experience/philosophy-extended    /index.html   200
+
+# Catch all - must be last
+/*    /index.html   200

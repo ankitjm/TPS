@@ -1,0 +1,45 @@
+•⁠  ⁠Infinity animation on home page mobile getting cut off 
+•⁠  ⁠⁠change to 2025 
+•⁠  ⁠⁠remove built with spline 
+•⁠  ⁠⁠move the logo on home page to top left 
+•⁠  ⁠⁠change the header font to Prototype (it’s in the brand manual)
+•⁠  ⁠⁠remove double arrows on the instruction tab when experience starts 
+•⁠  ⁠⁠mobile experience isn’t good so let’s redirect to experiencing it on desktop and the have the start experience pop up showcase see our work and watch the video button 
+•⁠  ⁠⁠after starting experience - it goes back to the home page - remove that and directly start the first experience frame
+•⁠  ⁠⁠”the story senses you” is illegible, change bg colours to be able to see
+•⁠  ⁠⁠”every display” font colour to be changed to white 
+•⁠  ⁠⁠logo in the end frame to be made into phygital logo 
+
+
+ <!-- Primary Meta Tags -->
+    <title>Phygital Studio - Experience Centers & Interactive Installations | Bangalore</title>
+    <meta name="title" content="Phygital Studio - Experience Centers & Interactive Installations | Bangalore" />
+    <meta name="description" content="Build an experience center with Phygital Studio. Leading Bangalore-based experience center building studio creating immersive phygital experiences, interactive installations, and digital transformation solutions." />
+    <meta name="keywords" content="experience centers, build an experience center, Bangalore experience center, experience center building studio, phygital experiences, interactive installations, immersive technology, digital experience centers, Bangalore based experience center, phygital studio, interactive displays, sensory experiences, digital transformation, experience design, immersive storytelling, phygital installations, Bangalore tech studio, experience center design, interactive walls, digital installations" />
+    <meta name="author" content="Phygital Studio" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+    <link rel="canonical" href="https://thephygital.studio" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://thephygital.studio" />
+    <meta property="og:title" content="Phygital Studio - Experience Centers & Interactive Installations | Bangalore" />
+    <meta property="og:description" content="Build an experience center with Phygital Studio. Leading Bangalore-based experience center building studio creating immersive phygital experiences and interactive installations." />
+    <meta property="og:image" content="https://thephygital.studio/og-image.jpg" />
+    <meta property="og:site_name" content="Phygital Studio" />
+    <meta property="og:locale" content="en_IN" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://thephygital.studio" />
+    <meta property="twitter:title" content="Phygital Studio - Experience Centers & Interactive Installations | Bangalore" />
+    <meta property="twitter:description" content="Build an experience center with Phygital Studio. Leading Bangalore-based experience center building studio creating immersive phygital experiences." />
+    <meta property="twitter:image" content="https://thephygital.studio/og-image.jpg" />
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="geo.region" content="IN-KA" />
+    <meta name="geo.placename" content="Bangalore" />
+    <meta name="geo.position" content="12.9716;77.5946" />
+    <meta name="ICBM" content="12.9716, 77.5946" />
