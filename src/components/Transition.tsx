@@ -42,12 +42,13 @@ const Transition: React.FC<TransitionProps> = () => {
       </div>
 
       {/* Main content */}
-      <div className="relative z-20 text-center max-w-6xl px-8 bg-black/40 backdrop-blur-md rounded-2xl py-8 md:py-12">
+      <div className="relative z-20 text-center max-w-6xl px-8 py-8 md:py-12">
         <motion.h2
           initial={{ opacity: 0, y: 50, scale: 0.8 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ delay: 0.5, duration: 1.5, ease: "easeOut" }}
-          className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-thin text-white drop-shadow-[0_2px_15px_rgba(0,0,0,0.8)] pointer-events-none mb-6 sm:mb-8 px-4"
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-thin text-white pointer-events-none mb-6 sm:mb-8 px-4"
+          style={{ textShadow: '0 2px 20px rgba(0,0,0,0.9), 0 4px 40px rgba(0,0,0,0.7), 0 0 80px rgba(0,0,0,0.5)' }}
         >
           You arrive, and the space{' '}
           <motion.span
@@ -74,7 +75,8 @@ const Transition: React.FC<TransitionProps> = () => {
             repeat: Infinity,
             repeatDelay: 2
           }}
-          className="text-base sm:text-lg md:text-xl text-gray-200 font-light drop-shadow-md"
+          className="text-base sm:text-lg md:text-xl text-gray-100 font-light"
+          style={{ textShadow: '0 2px 20px rgba(0,0,0,0.9), 0 4px 40px rgba(0,0,0,0.7)' }}
         >
           Hover, drag, or tap - it's all alive.
         </motion.div>
